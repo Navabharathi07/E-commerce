@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/52d7d03f35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+    
+        <i class="fa-solid fa-list" onclick="opentog()"></i>
+            <div class="navbar-items">
+                <a href="main.html" class="navbar-item">Home</a>
+                <a href="shop.html" class="navbar-item">Shop</a>
+                <a href="wishlist.html" class="navbar-item">Wishlist</a>
+                <a href="cart.html" class="navbar-item">Cart</a>
+                <a href="personal.html" class="navbar-item">Seller</a>
+                <a href="#" class="navbar-item">Profile</a>
+                <a href=""  class="navbar-item-list"><i class="fa-solid fa-list"></i></a>
+            </div>
+    </div>
+
+    <div class="category" id="category">
+
+        <h1 style="color: white; margin-left: 20px;">Category</h1>
+        <p style="color: white; cursor: pointer;" class="close" onclick="closetog()"><i class="fa-solid fa-xmark"></i></p>
+        
+            <div class="cat-item">
+                <p><a href="">Home Decor</a></p>
+                <p><a href="">Jewelry</a></p>
+                <p><a href="">Fashion</a></p>
+                <p><a href="">Art & Craft Supplies</a></p>
+                <p><a href="">Gifts & Accessories</a></p>   
+            </div>
+        
+    </div>
+
+    <div class="cart-tab">
+        <h1>Shopping Cart</h1>
+
+        <div class="list-cart">
+            <div class="list-item">
+
+                    <div class="image">
+                        <img src="images.jpeg" alt="ghjk">
+                    </div>
+                    <div class="item-name">
+                        Name
+                    </div>
+                    <div class="item-price">
+                        200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <div class="delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+            </div>
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="Buy">Buy</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

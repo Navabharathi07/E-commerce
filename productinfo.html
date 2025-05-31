@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="productinfo.css">
+    <script src="https://kit.fontawesome.com/52d7d03f35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+    
+        <i class="fa-solid fa-list" onclick="opentog()"></i>
+            <div class="navbar-items">
+                <a href="main.html" class="navbar-item">Home</a>
+                <a href="shop.html" class="navbar-item">Shop</a>
+                <a href="wishlist.html" class="navbar-item">Wishlist</a>
+                <a href="cart.html" class="navbar-item">Cart</a>
+                <a href="personal.html" class="navbar-item">Seller</a>
+                <a href="#" class="navbar-item">Profile</a>
+                <a href=""  class="navbar-item-list"><i class="fa-solid fa-list"></i></a>
+            </div>
+    </div>
+    
+    
+    <div class="category" id="category">
+    
+        <h1 style="color: white; margin-left: 20px;">Category</h1>
+        <p style="color: white; cursor: pointer;" class="close" onclick="closetog()"><i class="fa-solid fa-xmark"></i></p>
+        
+            <div class="cat-item">
+                <p><a href="">Home Decor</a></p>
+                <p><a href="">Jewelry</a></p>
+                <p><a href="">Fashion</a></p>
+                <p><a href="">Art & Craft Supplies</a></p>
+                <p><a href="">Gifts & Accessories</a></p>   
+            </div>
+        
+    </div>
+
+
+    <div class="container">
+        <div class="head">
+            <p>Personal <br>Information</p>
+            <p>Business <br>Information</p>
+            <p>Product <br>Information</p>
+        </div>
+        <!-- <div class="icon-container">
+            <img src="download-removebg-preview (1).png" alt="Icon"> 
+        </div> -->
+        <h1>Product Information</h1>
+        
+        <form action="">
+
+            <label for="">Product Name</label>
+            <input type="text" name="" id="" placeholder="Title">
+
+            <label for="">Product Category</label>
+            <select name="" id="">
+                <option value="">Home Decor</option>
+                <option value="">Jewelry</option>
+                <option value="">Fashion</option>
+                <option value="">Art & Craft Supplies</option>
+                <option value="">Gifts and Accessories</option>
+            </select>
+
+            <label for="">Number Of Products:</label>
+            <input type="number" name="" id="" placeholder="Number of available Products">
+
+            <label for="">Price:</label>
+            <input type="number" name="" id="" placeholder="Product Price">
+
+            <label for="">Product Description:</label>
+            <textarea name="" id=""></textarea>
+
+            <label for="">Custom Product available/not:</label>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="">
+                <label for="">Yes</label><br>
+                <input type="checkbox" name="" id="">
+                <label for="">No</label>
+            </div><br>
+            <label for="">Material Used:</label>
+            <input type="text" name="" id="" placeholder="Product Material">
+            
+            
+
+            <label for="">Quotes/Wishes</label>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="">
+                <label for="">Yes</label>
+                <input type="checkbox" name="" id="">
+                <label for="">No</label>
+            </div>
+
+            <h3>Dimensionals</h3>
+                <div class="Dimensionals">
+                    <label for="">Weight</label>
+                    <input type="text" name="" id="" placeholder="Weight">
+
+                    <label for="">length</label>
+                    <input type="text" name="" id="" placeholder="lenght">
+
+                    <label for="">width</label>
+                    <input type="text" name="" id="" placeholder="width">
+                </div>
+
+                <h1>Select Number of Colors</h1>
+                <form>
+                    <label for="colorCount">Number of colors:</label>
+                    <input type="number" id="colorCount" name="colorCount" min="1" oninput="updateColorInputs()">
+                    <div id="colorInputsContainer"></div>
+                </form>
+
+                <label for="">First image</label>
+                <input type="file" name="" id="">
+
+                <label for="">Second image</label>
+                <input type="file" name="" id="">
+
+                <label for="">Third image</label>
+                <input type="file" name="" id="">
+
+                <label for="">Fourth image</label>
+                <input type="file" name="" id="">
+                
+            <br><br><br>
+            <input type="submit" name="" id="">
+            <br><br><br><br><br>
+        </form>
+
+    </div>
+
+
+
+    <script>
+        function updateColorInputs() {
+            const colorCount = parseInt(document.getElementById('colorCount').value);
+            const colorInputsContainer = document.getElementById('colorInputsContainer');
+
+            // Clear previous inputs
+            colorInputsContainer.innerHTML = '';
+
+            // Add new inputs based on the entered number
+            if (!isNaN(colorCount) && colorCount > 0) {
+                for (let i = 0; i < colorCount; i++) {
+                    const inputField = document.createElement('input');
+                    inputField.type = 'text';
+                    inputField.name = `color${i + 1}`;
+                    inputField.placeholder = `Enter color ${i + 1}`;
+                    inputField.className = 'color-input';
+                    colorInputsContainer.appendChild(inputField);
+                }
+            }
+        }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

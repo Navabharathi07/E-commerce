@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <h1>Guess The Number🤔🤔</h1>
+    <input id="input">
+    <button onclick="Check()">Check</button>
+    <p>You are wrong'/right</p>
+    <p id="result"></p>
+    <p id="score">Your Score is: </p>
+
+    <script>
+
+        var result = document.getElementById("result")
+        var input = document.getElementById("input")
+        var Score = document.getElementById("score")
+        var score = 10        
+        function Check(){
+
+            var a = Math.random()
+            var num = Math.floor(a*10)+1
+
+            console.log(num)
+            var n = Number(input.value)
+
+
+            if(num == n){
+                result.textContent = "You are right"
+                alert("you won")
+            }
+            else{
+                result.textContent = "You are wrong"
+                score = score-1
+                Score.textContent = "Your Score is:"+score
+
+            }
+
+        } -->
+
+
+
+
+        <!-- <h1 id="name">Name</h1>
+        <button onclick="Name(event)">Mathi</button>
+        <button onclick="Name(event)">vanan</button>
+        
+        
+        <script>
+            var n = document.getElementById("name")
+
+            function Name()
+            {
+                n.textContent = event.target.textContent
+            } -->
+
+        <h1 onclick="del(event)">One</h1>
+        <h2 onclick="del(event)">Two</h2>
+        <h3 onclick="del(event)">Three</h3>
+        <h4 onclick="del(event)"> Four</h4>
+        <script>
+            function del(event){
+
+                event.target.remove()
+            }
+        </script>
+     
+        
+        
+    
+</body>
+</html>

@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 30px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-brand img {
+    height: 30px; /* Adjust height as needed */
+    margin-right: 10px;
+  }
+  
+  .navbar-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar  i{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  .navbar-item-list{
+    display: none;
+  }
+  .category a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+  }
+  .category{
+    width: 20%;
+    display: grid;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+  }
+  .category .close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .category .cat-item{
+      display: grid;
+      position: absolute;
+      top: 100px;
+      right: 100px;
+      /* transition: ; */
+  }
+  .category{
+    display: none;
+  }
+  .category .cat-item p a:hover{
+    text-decoration: underline;
+  }
+  
+  .navbar-items a:hover{
+    text-decoration: underline;
+  
+  }
+  /* ---------------------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 520px; /* Adjust to accommodate the fixed slideshow */
+    padding-top: 20px;  /* Add padding to avoid content being hidden behind fixed element */
+}
+.main-container img{
+    width: 500px;
+    height: 500px;
+    margin: 15px;
+}
+.slideshow-container {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    z-index: 1000; /* Ensures the slideshow is on top of other elements */
+    background-color: #fff; /* Optional: to have a background for the slideshow */
+}
+
+/* Style the images */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin-left: 15px;
+    color: black;
+}
+
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+
+.product-button button{
+    padding: 10px;
+    min-width: 200px;
+    margin-right: 30px;
+}
+.product-button{
+    margin-left: 30px;
+}
+.content{
+    /* margin-left: 20px;
+    margin-top: 20px; */
+    margin: 20px;
+    margin-top: 0px;
+    background-color: rgb(235, 233, 233);
+    padding-left: 15px;
+}
+.specification{
+    display: flex;
+    padding-left: 50px;
+}
+.specification section{
+    padding-top: 17px;
+    padding-left: 3px   ;
+}
+select{
+    background-color: #d6d8d3;
+}
+.ratings h4{
+    margin-left: 25px;
+}
+.ratings p{
+    margin-left: 5px;
+}
+
+.ratings{
+    display: block;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="prodet.css">
+</head>
+<body>
+    <div class="navbar">
+    
+        <i class="fa-solid fa-list" onclick="opentog()"></i>
+            <div class="navbar-items">
+                <a href="main.html" class="navbar-item">Home</a>
+                <a href="shop.html" class="navbar-item">Shop</a>
+                <a href="wishlist.html" class="navbar-item">Wishlist</a>
+                <a href="cart.html" class="navbar-item">Cart</a>
+                <a href="personal.html" class="navbar-item">Seller</a>
+                <a href="#" class="navbar-item">Profile</a>
+                <a href=""  class="navbar-item-list"><i class="fa-solid fa-list"></i></a>
+            </div>
+    </div>
+    
+    
+    <div class="category" id="category">
+    
+        <h1 style="color: white; margin-left: 20px;">Category</h1>
+        <p style="color: white; cursor: pointer;" class="close" onclick="closetog()"><i class="fa-solid fa-xmark"></i></p>
+        
+            <div class="cat-item">
+                <p><a href="">Home Decor</a></p>
+                <p><a href="">Jewelry</a></p>
+                <p><a href="">Fashion</a></p>
+                <p><a href="">Art & Craft Supplies</a></p>
+                <p><a href="">Gifts & Accessories</a></p>   
+            </div>
+        
+    </div>
+
+    <div class="main-container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img1.jpg" class="slide-image">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="img2.jpg" class="slide-image">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="img3.jpg" class="slide-image">
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="product-button">
+                <button>ADD TO CART</button>
+                <BUTTon>BUY NOW</BUTTon>
+            </div>
+        </div>
+    
+        <div class="content">
+            <p style="font-size: 2rem;">Name of the Product</p>
+            <h1>&#8377;500</h1>
+            <p>In stock</p>
+            <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nihil eveniet excepturi veniam tempore explicabo saepe id, aliquid odit omnis.</p>
+            
+            <h2>Select colors:</h2>
+            <select name="" id="">
+                <option value="">Red</option>
+                <option value="">Yellow</option>
+            </select>
+
+            <form action="">
+                <b><label for="">Define the customization:</label></b><br>
+                <textarea name="" id=""></textarea>
+            </form>
+
+            <hr>
+
+            <h1>Packaging:</h1>
+            <p>Each journal is packaged in a recyclable kraft paper box, wrapped in tissue paper, making it perfect for gifting.</p>
+            
+            <hr>
+
+            <h1>Shipping and Delivery</h1>
+            <p>Standard shipping: 3-5 business days. Expedited shipping options available at checkout. International shipping available to select countries.</p>
+            
+            <hr>
+
+            <h3>Specifications:</h3>
+            <div class="specification">
+                <b><p>Weight:</b> <section>200g</section></p>
+            </div>
+            <div class="specification">
+                <b><p>Length:</b> <section>100cm</section></p>
+            </div>
+            <div class="specification">
+                <b><p>Width:</b> <section>100cm</section></p>
+            </div>
+            <div class="specification">
+                <b><p>Material Used:</b> <section>Wood</section></p>
+            </div>
+            <div class="specification">
+                <b><p>Category:</b> <section>Home Decor</section></p>
+            </div>
+
+            <h2>Ratings and Reviews</h2>
+            <div class="ratings">
+                
+                <h4>4★</h4>
+                <p>933 Ratings & <br>320 Reviews</p>
+                
+                <button>Rate Product</button>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith:</strong> "I love the customization options. It made for a perfect gift!"</p>
+            </div>
+               
+            
+            
+        </div>
+    </div>
+    
+    <br>
+
+<br>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+</script>
+</body>
+</html>

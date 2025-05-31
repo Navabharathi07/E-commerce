@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="productForm">
+
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required></textarea><br>
+        
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="home-decor">Home Decor</option>
+            <option value="jewelry">Jewelry</option>
+            <option value="fashion">Fashion</option>
+            <option value="art-craft-supplies">Art & Craft Supplies</option>
+            <option value="gifts-accessories">Gifts & Accessories</option>
+        </select><br>
+
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" step="0.01" required><br>
+
+        <label for="imageInput">Choose an image:</label>
+        <input type="file" id="imageInput" name="imageInput" accept="image/*">
+
+        <button type="button" >Add Product</button>
+    </form>
+
+    <script src="shop.js"></script>
+</body>
+</html>
